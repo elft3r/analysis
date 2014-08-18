@@ -148,8 +148,20 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 	\item $\frac{d}{dx}\; e^{x^\alpha} = \alpha x^{\alpha - 1} e^{x^\alpha}$
 
 
-	\item $\frac{d}{dx}\; \ln(x) = \frac{1}{x}$
-	\item $\frac{d}{dx}\; \alpha^x = \alpha^x \ln(\alpha)$
+	\item 
+		\begin{minipage}{0.4\columnwidth}
+			$\frac{d}{dx}\; \ln(x) = \frac{1}{x}$
+		\end{minipage}
+		\begin{minipage}{0.55\columnwidth}
+			$\frac{d}{dx}\; \ln(ax + b) = \frac{a}{ax+b}$
+		\end{minipage}
+	\item 
+		\begin{minipage}{0.4\columnwidth}
+			$\frac{d}{dx}\; \alpha^x = \alpha^x \ln(\alpha)$
+		\end{minipage}
+		\begin{minipage}{0.55\columnwidth}
+			$\frac{d}{dx}\; \ln(ax^c + b) = \frac{acx^{c-1}}{ax^c+b}$
+		\end{minipage}
 	\item $\frac{d}{dx}\; x^x = x^x (1 + \ln(x))$
 	\item $\frac{d}{dx}\; x^{x^\alpha} = x^{x^\alpha + \alpha - 1} (\alpha \log(x) + 1)$ 
 	\vspace{0.1cm}\hrule
@@ -306,10 +318,10 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 	\item $\int \frac{1}{\sqrt{1 + x^2}} \, dx = \arcsinh(x)$
 
 	\item $\int a^{xb + c} \,dx = \frac{a^{bx + c}}{b \log(a)}$
-	\item $\int \frac{ax + b}{px + q} \,dx = \frac{ax}{p} + \frac{bp - aq}{p^2} \ln |pq+q|$
+	\item $\int \frac{ax + b}{px + q} \,dx = \frac{ax}{p} + \frac{bp - aq}{p^2} \ln |px+q|$
 \end{itemize}
 
-\subsubsection{trionometrische Funktionen}
+\subsubsection{trigonometrische Funktionen}
 \begin{itemize}[leftmargin=*]
 	% sin
 	\item
@@ -411,14 +423,15 @@ $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{y}{x}$
 	\item \textbf{Vergleich von Folgen}: weiter rechts stehende Folgen streben
 	schneller gegen $\infty$:
 	\[
-		1, \quad \ln n, \quad n^\alpha (\alpha > 0), \quad q^n (q > 1), \quad n!, \quad n^n \Rightarrow
+		1, \ln n, \quad n^\alpha (\alpha > 0), \quad q^n (q > 1), \quad n!, \quad n^n \Rightarrow
 		\lim_{x \to \infty} \frac{\ln n}{n^\alpha} = 0
 	\]
 \end{itemize}
 $\lim_{n \to \infty}$
 \begin{itemize}[leftmargin=*]
 	\item $\lim_{n \to \infty} \sqrt[n]{a} \rightarrow 1$
-	\item $\lim_{n \to \infty} \sqrt[n]{n} \rightarrow 1$
+	\item $\lim_{n \to \infty} \sqrt{n} \rightarrow \infty$
+	\item $\lim_{n \to \infty} \sqrt[n]{n} = 1$
 	\item $\lim_{n \to \infty} \sqrt[n]{n!} \rightarrow \infty$
 	\item $\lim_{n \to \infty} \frac{n}{\sqrt[n]{n!}} \rightarrow e$
 	\item $\lim_{n \to \infty} \frac{1}{n} \sqrt[n]{n!} \rightarrow \frac{1}{e}$
@@ -435,9 +448,9 @@ $\lim_{n \to \infty}$
 	\item $\lim_{n \to \infty} a^n n^k \rightarrow 0, |a| < 1, k$ fest
 	\item $\lim_{n \to \infty} n(\sqrt[n]{a} - 1) \rightarrow \ln a, a > 0$
 	\item $\lim_{n \to \infty} \left( 1+\frac{x}{n} \right)^n = e^x \quad$
-	\item $\lim_{n \to \infty} \sqrt[n]{n} = 1$
 	\item $\lim_{n \to \infty} n^p q^n = 0 \qquad p \in \N \text{ und } 0 < q < 1$
-	\item $\lim_{x \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$ 
+	\item $\lim_{x \to \infty} \sqrt{x^2-x}-x = \frac{1}{2}$
+	\item $\lim_{x \to \infty} q^x = 0$
 	%\newline
 	%{\small (Lösungsansatz mit Taylorreihe
 	%($\sqrt{1-x} = 1 + \frac{x}{2}+O(x^2)$): $\sqrt{x^2-x}-x = x(\sqrt{1-\frac{1}{x}}-1) =
@@ -561,8 +574,7 @@ $\lim_{x \to 0}$
   \item $\log_a \frac{x}{y} = \log_a x - \log_a y$
   \item $\log_a \frac{1}{x} = - \log_a x$
   \item $\log_a x^r = r \log_a x$
-  \item $\log_a x = \frac{\log_b x}{\log_b a}$
-  \item $\log_a x = \frac{\ln x}{\ln a}$
+  \item $\log_a x = \frac{\log_b x}{\log_b a}$ \textit{oder} $\log_a x = \frac{\ln x}{\ln a}$ ($b=e$)
   \item $\log_a (x+y) = \log_a x + log_a (1 + \frac{y}{x})$
   \item $\log_a (x-y) = \log_a x + \log_a (1- \frac{y}{x})$
 \end{itemize}
@@ -573,9 +585,10 @@ $\lim_{x \to 0}$
   \item $e^0 = 1$
   \item $e^1 = e =  2.718281828$
   \item $e^{\inf} = \inf$
-  \item $e^{a+bi} = e^a(\cos(b) + i \sin(b))$ (Euler Identität)
+  \item $e^{a+bi} = e^{a} \cdot e^{bi} = e^a(\cos(b) + i \sin(b))$ (Euler Identität)
   \item $e^{b \ln(a)} = a^b$
-  \item $ e^{-\ln(b)} = \frac{1}{b}$ 
+  \item $e^{-\ln(b)} = \frac{1}{b}$
+  \item $e^{i\pi} + 1 = 0$
 \end{itemize}
 
 \subsection{Komplexe Zahlen}
@@ -583,6 +596,7 @@ $\lim_{x \to 0}$
 	\item $z \in \C: z = a + b\cdot i$
 	\item $\bar{z} = a - b\cdot i$
 	\item $|z|^2 = z \cdot \bar{z} = (a + b\cdot i) \cdot (a - b\cdot i) = a^2 + b^2$
+	\item $|z| = \sqrt{z \cdot \bar{z}} = \sqrt{a^2 + b^2}$
 	\item $i^2 = -1$
 	\item $(a + bi) + (c + di) = (a + c) + (b + d)i$
 	\item $(a + bi) \cdot (c + di) = (ac - bd) + (ad + bc)i$

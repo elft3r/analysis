@@ -13,9 +13,7 @@
 %%
 %% License: Creative Commons Attribution-Share Alike 3.0 Unported
 %% http://creativecommons.org/licenses/by-sa/3.0/
-%% 
-
-
+%%
 \documentclass[a4paper,titlepage,twocolumn]{article}
 \usepackage[ngerman]{babel}
 
@@ -30,51 +28,48 @@
 \makeindex
 
 \begin{document}
-\input{./includes/amsmath-doc-settings.tex}
+	\input{./includes/amsmath-doc-settings.tex}
 
-\onecolumn
-{\footnotesize
-\begin{multicols}{3}
-\thispagestyle{empty}
-\setcounter{tocdepth}{3}
-\tableofcontents
-\end{multicols}
+	\onecolumn
+	{\footnotesize
+		\begin{multicols}{3}
+		\thispagestyle{empty}
+		\setcounter{tocdepth}{3}
+		\tableofcontents
+		\end{multicols}
 
-%\idxlayout{columns=4,rule=0.1pt}
-%\printindex
-}
-\twocolumn
-\newpage
-\setcounter{page}{1}
-\pagestyle{plain}
+		%\idxlayout{columns=4,rule=0.1pt}
+		%\printindex
+	}
+	\twocolumn
+	\newpage
+	\setcounter{page}{1}
+	\pagestyle{plain}
 
-\input{./texFiles/induktion.tex}
-\input{./texFiles/logik.tex}
-\input{./texFiles/mengen.tex}
-\input{./texFiles/funktionen.tex}
-\input{./texFiles/zwischenwertsatz.tex}
-\input{./texFiles/folgen_R.tex}
-\input{./texFiles/taylor.tex}
-\input{./texFiles/reihen.tex}	
-\input{./texFiles/funktion_stetigkeit_limes.tex}
-\input{./texFiles/stetigkeit_funktion_mehrere_variabeln.tex}
-\input{./texFiles/funktionsfolgen.tex}
-\input{./texFiles/differenzierbarkeit.tex}
-\input{./texFiles/partialbruchzerlegung.tex}
-\input{./texFiles/riemannsumme.tex}
-\input{./texFiles/integralrechnung.tex}
-\input{./texFiles/integral_Rn.tex}
-\input{./texFiles/kurvenintegral.tex}
-\input{./texFiles/differentialgleichungen.tex}
-\input{./texFiles/differential_Rn.tex}
-\input{./texFiles/vektoranalysis.tex}
+	\input{./texFiles/induktion.tex}
+	\input{./texFiles/logik.tex}
+	\input{./texFiles/mengen.tex}
+	\input{./texFiles/funktionen.tex}
+	\input{./texFiles/zwischenwertsatz.tex}
+	\input{./texFiles/folgen_R.tex}
+	\input{./texFiles/taylor.tex}
+	\input{./texFiles/reihen.tex}	
+	\input{./texFiles/funktion_stetigkeit_limes.tex}
+	\input{./texFiles/stetigkeit_funktion_mehrere_variabeln.tex}
+	\input{./texFiles/funktionsfolgen.tex}
+	\input{./texFiles/differenzierbarkeit.tex}
+	\input{./texFiles/partialbruchzerlegung.tex}
+	\input{./texFiles/riemannsumme.tex}
+	\input{./texFiles/integralrechnung.tex}
+	\input{./texFiles/integral_Rn.tex}
+	\input{./texFiles/kurvenintegral.tex}
+	\input{./texFiles/differentialgleichungen.tex}
+	\input{./texFiles/differential_Rn.tex}
+	\input{./texFiles/vektoranalysis.tex}
+	\input{./texFiles/formeltafel.tex}
+	\input{./texFiles/koordinaten_systeme.tex}
+	\input{./texFiles/funktionsabbilungen.tex}
 
-\clearpage
-\input{./texFiles/formeltafel.tex}
-\input{./texFiles/koordinaten_systeme.tex}
-\input{./texFiles/funktionsabbilungen.tex}
-
-% fill the page
-\clearpage
-
+	% fill the page
+	\clearpage
 \end{document}

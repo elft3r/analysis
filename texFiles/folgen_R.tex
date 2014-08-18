@@ -3,12 +3,12 @@ Eine Folge $a_n$ ist eine Funktion von $\N \backslash \{0\} \to \R$. Man nennt $
 
 \subsection{Definitionen}
 \begin{description}
-  \item[konvergent] $\lim_{x \to \infty} a_n$ existiert \index{konvergent}
+  \item[konvergent] $\lim_{x \to \infty} a_n$ existiert \index{konvergent} (aus Konvergenz folgt Beschränktheit)
   \item[divergent] $\lim_{x \to \infty} a_n$ existiert nicht \index{divergent}
   \item[Nullfolge] $\lim_{x \to \infty} a_n = 0$ gilt \index{Nullfolge}
   \item[beschränkt] $\exists \, C_1, C_2 \in \R$, sodass gilt: $C_1 \leq a_n \leq C_2$ \hspace{0.3cm} oder\\
   $\exists \, C$ sodass gilt: $|a_n| \leq C$
-  \item[unbeschränkt] falls $(a_n)$ nicht beschränkt ist. Unbeschränkte folgen
+  \item[unbeschränkt] falls $(a_n)$ nicht beschränkt ist. Unbeschränkte Folgen
   sind stets \underline{divergent}
   \item[monoton wachsend] $a_n \leq a_{n+1} \quad \forall n \in \N$ \index{monoton}
   \item[streng monoton wachsend] $a_n < a_{n+1} \quad \forall n \in \N$
@@ -36,7 +36,7 @@ dass noch unendlich viele übrigbleiben, so erhält man eine Teilfolge.
 Konvergiert eine Folge $a_n$ gegen a, so konvergiert auch jede Teilfolge gegen $a$!
 \end{definition}
 
-\begin{definition}[Häufungspunkt] \index{Häufungspunkt}
+\begin{definition}[Häufungspunkt] \index{Häufungspunkt} (Bolzano-Weierstrass)
 	Ein Häufungspunkt ist ein Grenzwert einer Teilfolge (Bsp. H-Punkte von $(-1)^n$ = $\{1, -1\}$). \\
 	Anderst ausgedrückt: 
 	$a$ ist Häufungspunkt der Folge $(a_n)$, wenn in jeder Umgebung von $a$
@@ -105,9 +105,9 @@ Produkt:
 $\lim_{n \to \infty} a_n = a$, $\lim_{n \to \infty} b_n = b$\\
 \emph{\underline{Achtung!} Untenstehendes gilt \underline{nur} wenn die Grenzwerte von $a_n$ und $b_n$ existieren. (Nicht $0$ oder $\infty$ sind.)}
 \begin{itemize}
-  \item $\lim_{n \to \infty} (a_n \pm b_n) = a \pm b$
+  \item $\lim_{n \to \infty} (a_n \pm b_n) = a \pm b = \lim_{n \to \infty} a_n + \lim_{n \to \infty} b_n$
   \item $\lim_{n \to \infty} (c \cdot a_n) = c \cdot a$
-  \item $\lim_{n \to \infty} (a_n \cdot b_n) = a \cdot b$
+  \item $\lim_{n \to \infty} (a_n \cdot b_n) = a \cdot b = \lim_{n \to \infty} a_n \cdot \lim_{n \to \infty} b_n$
   \item $\lim_{n \to \infty} (a_n)^c = (\lim_{n \to \infty} a_n)^c, \quad$ nur wenn $c \neq n$
   \item $\lim_{n \to \infty} \frac{a_n}{b_n} = \frac{a}{b}, \quad$ nur wenn $(b_n)$ keine Nullfolge
 \end{itemize}
@@ -220,16 +220,16 @@ nun verwenden wir den Tipp für Brüche und kürzen das $n$ heraus
 
 \subsubsection{Laufvariable im Exponent}
 $\lim_{x \to 0} (3 - |x|)^{\frac{\sin(x)}{x}}$\newline
-Verwende $(x = e^{\ln x})$ Also: $(3 - |x|)^{\frac{\sin(x)}{x}} = e^{\frac{\sin(x)}{x} \cdot \ln(3 -
-|x|)}$\newline
-$\Rightarrow 
-\lim_{x \to 0} (3 - |x|)^{\frac{\sin(x)}{x}} = \lim_{x \to 0}e^{\frac{\sin(x)}{x} \cdot \ln(3 -
-|x|)}$\newline
+$\Rightarrow (3 - |x|)^{\frac{\sin(x)}{x}} = e^{ln((3 - |x|)^{\frac{\sin(x)}{x}})}$\newline
+$^{\text{Verwende } (y = e^{\ln y})}$\newline
+$\Rightarrow e^{\frac{\sin(x)}{x} \cdot \ln(3 - |x|)}$\newline
 $\Rightarrow \lim_{x \to 0}\frac{\sin(x)}{x}\cdot \ln(3-|x|) = \ln(3)$\newline
-$\Rightarrow \lim_{x \to 0}(3 - |x|)^{\frac{\sin(x)}{x}} = e^{\ln(3)} = 3$
+$^{\text{(Berechne Limes vom Exponenten separat)}}$\newline
+$\Rightarrow \lim_{x \to 0}e^{\frac{\sin(x)}{x} \cdot \ln(3 - |x|)} = e^{\ln(3)} = 3$\newline
+$^{\text{(Setze Limes im Exponent ein)}}$
 
 \subsubsection{Term erweitern}
-Oft steht ein Term da, der annähernd so aussieht wie etwas das wir bereits kennen. Durch Term/Bruch - Erweiterung lässt er sich oft auf eine bekannte Form bringen, welches separat gelöst werden kann lösen.
+Oft steht ein Term da, der annähernd so aussieht wie etwas das wir bereits kennen. Durch Term/Bruch - Erweiterung lässt er sich oft auf eine bekannte Form bringen, welches separat gelöst werden kann.
 \[
 	\lim_{x \to 0} \frac{\sin |x|}{\sqrt{|x|}} = 
 	\lim_{x \to 0+} \frac{\sqrt{x} \cdot \sin x}{\sqrt{x} \cdot \sqrt{x}} =
